@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bitacora Alexia</title>
+    <style>
+        @property --maria {
+            syntax: "<color>";
+            inherits: true;
+            initial-value: #ffa6a6;
+        }
+ 
+        @property --tamaño{
+            syntax: "<length>";
+            inherits: false;
+            initial-value: 20px;
+        }
+        nav {
+            background-color: #ff7777;
+            color: aliceblue;
+            padding: 20px;
+            position: sticky;
+            overflow: hidden;
+            top: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+       
+        }
+ 
+        nav ul li{
+            display: inline;
+            margin: 10px;
+        }
+
+
+        h6{
+            font-size: var(--tamaño);
+        }
+
+        .contenedor{
+            width: 99%;
+            height: 80%;
+            background-color: var(--maria);
+            display: block;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .otro{
+            width: 99%;
+            height: 80%;
+            background-color: #ff7777;
+            display: block;
+            margin-top: -40px;
+            margin-bottom: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .mascara {
+            mask-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/500px-Apple_logo_black.svg.png);
+            mask-repeat: no-repeat;
+        }
+
+        .padre{
+            font-size: 20px;
+        }
+ 
+        .hijo{
+            font-size:2em;
+            color: blue;
+        }
+        .remex{
+            font-size: 2rem;
+            color: aqua;
+        }
+        .vh{
+            height: 65vh;
+            background-color: pink;
+        }
+        .vw{
+            width: 75vw;
+            background-color: #ffa6a6;
+        }
+        .h1{
+            width: 100px;
+            height: 100px;
+        }
+ 
+        @media (max-width: 700px){
+            nav ul{
+                text-align: center;
+            }
+ 
+            nav ul li {
+                display: block;
+                margin: 10px;
+            }
+        }
+
+        .cajas2{
+            height: 65vh;
+            background-color: rgb(109, 168, 255);
+        }
+        
+
+        .cajas{
+            height: 65vh;
+            background-color: pink;
+        }
+        .h2{
+            width: 100px;
+            height: 100px;
+        }
+
+        @media (max-width: 768px){
+            .cajas2{
+            color: black;
+            background-color: skyblue;
+            }
+        }
+        @media (min-width: 1024px){
+            .cajas2{
+            color: black;
+            background-color: rgb(44, 100, 184);
+        }
+
+        .tx1{
+            color: blueviolet;
+        }
+        .diferente{
+            font-size: 6rem;
+        }
+        .sombra{
+            text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Acerca de</a></li>
+            <li><a href="">Contacto</a></li>
+        </ul>
+    </nav>
+    <center><div class="otro">
+        <h6><br>Diseño Web HTML5 y CSS3 adaptativo<br>
+        Alexia Michelle Minjares Granados<br>
+        A-L 1<br>
+        23/Septiembre/2025<br><br></h6>
+    </div></center>
+
+    <div class="contenedor">
+        <br>DOM
+        <br>Las siglas DOM significan Document Object Model, o lo que es lo mismo, la estructura de un documento HTML. Una página HTML está formada por múltiples etiquetas HTML, anidadas una dentro de otra, formando un árbol de etiquetas relacionadas entre sí<br> 
+        <br>Dom de eventos<br>
+        La animación del DOM se puede lograr modificando el estilo del elemento DOM con JavaScript. Cuando los cambios son graduales y el intervalo de tiempo es corto, la animación parece continua.
+Se cambia el estilo del elemento DOM después de un intervalo de tiempo determinado para animarlo.<br>
+         - Ejemplo con uso de JavaScript : proporciona la mayor flexibilidad, lo que le permite manipular dinámicamente las propiedades de estilo y crear animaciones complejas directamente dentro de su código JavaScript
+- Se puede usar el método setInterval() para cambiar la posición del elemento DOM y moverlo de una posición a otra con animación.<br><br>
+
+        Dom de animacion<br>
+        Los eventos son cosas que pasan en el sistema que estás programando, el cual se encarga de avisarte para que tu código pueda hacer algo al respecto.<br>
+         - Ejemplo: Si el usuario hace clic en el botón de una página web, puede que quieras reaccionar a esa acción y mostrar una tarjeta con información<br><br>
+
+        Dom de CSS<br>
+        El Modelo de objetos CSS (CSS Object Model) es un conjunto de APIs que permite manipular CSS desde JavaScript.
+CSSOM (CSS Object Model) es para CSS<br>
+        Tema 1<br><br>
+    </div>
+
+    <div class="contenedor">
+        <br>Viewport:
+        <br>Es el área de la ventana en la que se puede ver el contenido web 
+        <br><br>Conferencias de IA:
+        <br>Un tema importante que encontré en las conferencias fue la forma en la que describieron como nosotros como diseñadores podemos utilizar métodos como aumento de ruido en las imágenes que subamos en internet promocionando nuestro trabajo para que la IA no pueda analizar nuestros estilos de diseño y no peda replicarlos, también me gusto la historia de la recolección de imágenes de fotografías en un mercado de pulgas y como la persona utilizó esas fotos para presentarlas como un trabajo propio al transformarlo en no solo fotografías sino en contar una historia y que incluso utilizó 
+        
+        <br><br>Unidades de medida estáticas:
+        <ul>
+            <li>Pixeles: Un punto fijo en la pantalla (px) </li>
+            <li>Pulgadas/Centímetros/Milímetros: Unidades físicas estándar (in/cm/mm) </li>
+            <li>Picas: Unidad de longitud equivalente a 1/6 de pulgada (pc) </li>
+            <li>Puntos: Se utiliza en las tipografías 1/72 de pulgada (pt) </li>
+        </ul>
+    
+        <br>Unidades de medida relativas: 
+        <ul>
+            <li>Em: Tamaño de la fuente del elemento del padre (Font size 16px)</li>
+            <li>Rem: Tamaño de la fuente del elemento raiz en <html> (Root)</li>
+            <li>Ch: El ancho de la letra “0” del elemento</li>
+            <li>%: Porcentaje de dimensión del elemento contenedor del padre</li>
+            <li>Cqw/cqh: Undidades de contenedor que se adaptan al tamaño del contenedor especifico, no solo al padre</li>
+            <li>Vw: El ancho total de la ventana grafica</li>
+            <li>Vh: La altura total de la ventana grafica</li>
+            <li>Vmin: La dimensión más pequeña (ancho o alto) de la ventana gráfica.</li>
+            <li>Vmax: La dimensión más grande (ancho o alto) de la ventana gráfica.</li>
+        </ul><br>
+        </div>
+
+    <div class="mascara">
+        <img height="650px" src="https://i.redd.it/r4pw1aehgwb81.jpg" alt="Img de Undertale">
+    </div>
+
+
+<div class="padre">
+        Texto padre
+        <div class="hijo">Texto hijo </div>
+    </div>
+ 
+    <div class="remex">Texto rem</div>
+ 
+    <div class="vh">
+        <br><h3>Investicacion:</h3>
+        <ul>
+            <li><h4>Color animation:</h4>Es una animación que cambia gradualmente el valor de un color en un elemento html que se combina con la propiedad transition o con reglas de @keyframes para crear efectos suaves.</li><br>
+            <li><h4>Delay:</h4> Define cuánto tiempo debe esperar una animación antes de comenzar, se puede medir en segundos (s) o milisegundos (ms) y suele usarse para escalonar animaciones o crear efectos de aparición.</li>
+            <li><h4>Animation-timing-function:</h4>Define la velocidad y aceleración con la que se reproduce una animación y controla cómo se distribuye el tiempo de los cuadros de la animación.</li>
+            <li><h4>Animation-direction:</h4>Controla la dirección en la que se reproduce una animación y cómo se comporta en ciclos repetitivos.</li>
+            <li><h4>Animation-fill-mode:</h4>Define cómo se aplican los estilos de la animación antes y después de que esta ocurra.</li>
+            
+
+        </ul><br>
+        
+        
+    </div>
+    <div class="vw">Investigacion</div>
+    <div class="cajas">
+        <picture>
+        <source media="(min-width: 1600px)" srcset="img/pag1.png">
+        <source media="(min-width: 1400px)" srcset="img/pag2.png">
+        <source media="(min-width: 1200px)" srcset="img/pag3.png">
+        <source media="(min-width: 1000px)" srcset="img/pag4.png">
+        <source media="(min-width: 800px)" srcset="img/pag5.png">
+        <img src="img/pag6.png" alt="banner de sitio" style="width: 340px; height: 596px;">
+    </picture>
+    </div>
+    <div class="vw">Estos son los graficos de temas previos</div><br>
+
+<div class="vh">
+        <img src="img/Papeleria chihuahua.jpg" alt="Papeleria Chihuahua" height="590px">
+        
+    </div>
+    <div class="vw">Diagrama de pagina Web con errores</div><br>
+
+<div class="vh">
+        <img src="img/Recreacion pagina web.jpg" alt="" height="590px">
+        <img src="img/Diagrama de flujo.jpg" alt="" height="590px">
+    </picture>
+    </div>
+    <div class="vw">Recreacion de pagina web y diagrama de flojo de videojuego</div><br>
+
+
+
+
+
+
+    <div class="vh">
+        <img src="img/Conferencia IA.jpg" alt="Conferencia IA" height="" width="850px">
+    </div>
+    <div class="vw">Diagrama de conferencia IA</div><br>
+
+
+    <div class="cajas2">
+        <h2 class="tx1 diferente sombra">A partir de aqui es del 2do parcial
+        <br><img src="img/Wireframes Uacj.jpg" alt="Conferencia IA" height="300" width="px"><br>
+        <img src="img/Mapa de la pagina.jpg" height="" width="600px">
+        </h2>
+    <div class=cajas2>
+        <h2 class="tx1 sombra">Aqui iran los otros temas</h2>
+        <h2 class="tx1">Aqui alguna descripcion</h2>
+    </div></div>
+</body>
+</html>
