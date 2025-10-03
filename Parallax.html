@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Interno</title>
+  <style>
+    * {
+      margin: 10;
+      padding: 10;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #eee;
+      height: 200vh;
+    }
+
+    @property --maria {
+            syntax: "<color>";
+            inherits: true;
+            initial-value: #ffa6a6;
+        }
+ 
+        @property --tamaño{
+            syntax: "<length>";
+            inherits: false;
+            initial-value: 20px;
+        }
+        nav {
+            background-color: #ff7777;
+            color: aliceblue;
+            padding: 20px;
+            position: sticky;
+            overflow: hidden;
+            top: 0;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+       
+        }
+ 
+        nav ul li{
+            display: inline;
+            margin: 10px;
+        }
+
+    .parallax-container {
+      position: relative;
+      height: 90vh;
+      overflow: hidden;
+    }
+
+    .layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      will-change: transform;
+    }
+
+    .layer1 {
+      background-image: url("img/Cielo.png");
+      z-index: 1;
+    }
+    
+     .layer2 {
+      background-image: url("img/Estrellas.png");
+      z-index: 2;
+      
+    }
+
+    .layer3 {
+      background-image: url("img/Logo.png");
+      z-index: 3;
+    }
+
+    .layer4 {
+      background-image: url("img/Nubes.png");
+      z-index: 4;
+    }
+    @media (max-width: 768px) {
+      body {
+        height: auto;
+      }
+      .parallax-container {
+        height: 30vh; /* reduce la altura en tablet */
+      }
+      .layer1 {
+        background-size: contain; /* ajusta nubes */
+        background-repeat: no-repeat;
+      }
+      .layer2 {
+        background-size: contain; /* ajusta nubes */
+        background-repeat: no-repeat;
+      }
+      .layer3 {
+        background-size: 60%; /* logo más pequeño */
+        background-repeat: no-repeat;
+      }
+      .layer4 {
+        background-size: contain; /* ajusta nubes */
+        background-repeat: no-repeat;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Parallax.html">Parallax</a></li>
+        </ul>
+    </nav>
+  
+  <div class="parallax-container">
+    <div class="layer layer1" data-speed="0.2"></div>
+    <div class="layer layer2" data-speed="2.0"></div>
+    <div class="layer layer3" data-speed="1.0"></div>
+    <div class="layer layer4" data-speed="0.5"></div>
+  </div>
+
+  <script>
+    const layers = document.querySelectorAll(".layer, .layer2 img");
+
+    window.addEventListener("scroll", () => {
+      let scrollY = window.scrollY;
+      layers.forEach(layer => {
+        const speed = layer.getAttribute("data-speed");
+        if (speed) {
+          layer.style.transform = `translateY(${scrollY * speed}px)`;
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
