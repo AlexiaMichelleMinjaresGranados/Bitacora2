@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Interno</title>
+  <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Parcial2.html">Parcial2</a></li>
+        </ul>
+    </nav>
+    <center><div class="otro">
+        <h6><br>Diseño Web HTML5 y CSS3 adaptativo<br>
+        Alexia Michelle Minjares Granados<br>
+        A-L 1<br>
+        09/Octubre/2025<br><br></h6>
+    </div></center>
+  
+  <div class="parallax-container">
+    <div class="layer layer1" data-speed="0.2"></div>
+    <div class="layer layer2" data-speed="2.0"></div>
+    <div class="layer layer3" data-speed="1.0"></div>
+    <div class="layer layer4" data-speed="0.5"></div>
+  </div>
+
+  <script>
+    const layers = document.querySelectorAll(".layer, .layer2 img");
+
+    window.addEventListener("scroll", () => {
+      let scrollY = window.scrollY;
+      layers.forEach(layer => {
+        const speed = layer.getAttribute("data-speed");
+        if (speed) {
+          layer.style.transform = `translateY(${scrollY * speed}px)`;
+        }
+      });
+    });
+  </script>
+<div class="vh">
+        <h2 class="tx1 diferente sombra">A partir de aqui es del 2do parcial
+        <br><img src="img/Wireframes Uacj.jpg" alt="Conferencia IA" height="500" >
+        </h2>
+    </div>
+    <div class="vw">Mi Wireframe de propuesta de pagina UACJ</div><br>
+</body>
+<div class="vh">
+        <img src="img/Mapa de la pagina.jpg"  width="1880px">
+    </div>
+    <div class="vw">Mapa del sitio de mi propuesta de pagina UACJ</div><br>
+
+    <div class="vh">
+        <img src="img/Wireframes Fino Uacj.jpg" alt="Wireframe Fino UACJ" height="600">
+    </div>
+    <div class="vw">
+      Wireframe Fino UACJ
+    </div><br>
+
+    <div class="vh">
+        <h2 class="tx1 sombra">Aqui iran los otros temas</h2>
+    </div>
+    <div class="vw">
+      <h2 class="tx1">Aqui alguna descripcion</h2>
+    </div><br>
+</html>
