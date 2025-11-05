@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Interno</title>
+  <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+</head>
+<body>
+  <nav>
+        <ul>
+            <li><a href="index.html">Parcial1</a></li>
+            <li><a href="Parcial2.html">Parcial2</a></li>
+            <li><a href="Parcial3.html">Parcial3</a></li>
+        </ul>
+    </nav>
+    <center><div class="otro">
+        <h6><br>Diseño Web HTML5 y CSS3 adaptativo<br>
+        Alexia Michelle Minjares Granados<br>
+        A-L 1<br>
+        11/Noviembre/2025<br><br></h6>
+    </div></center>
+
+  <div class="parallax-container">
+    <div class="layer layer1" data-speed="0.2"></div>
+    <div class="layer layer2" data-speed="2.0"></div>
+    <div class="layer layer3" data-speed="1.0"></div>
+    <div class="layer layer4" data-speed="0.5"></div>
+  </div>
+  
+  <script>
+    const layers = document.querySelectorAll(".layer, .layer2 img");
+
+    window.addEventListener("scroll", () => {
+      let scrollY = window.scrollY;
+      layers.forEach(layer => {
+        const speed = layer.getAttribute("data-speed");
+        if (speed) {
+          layer.style.transform = `translateY(${scrollY * speed}px)`;
+        }
+      });
+    });
+  </script>
+  
+<div class="contenedor">
+        <h2 class="tx1 diferente sombra">A partir de aqui es del 3er parcial
+        <br><img src="img/P1.jpg" alt="Conferencia IA" height="260" >
+        <img src="img/P2.jpg" alt="Conferencia IA" height="260" >
+        <img src="img/P3.jpg" alt="Conferencia IA" height="260" >
+        <img src="img/P4.jpg" alt="Conferencia IA" height="260" >
+        <img src="img/P5.jpg" alt="Conferencia IA" height="260" >
+        <img src="img/P6.jpg" alt="Conferencia IA" height="260" >
+        </h2>
+    </div>
+    <div class="vw">Explicacion de colores y tipografias</div><br>
+</body>
+
+    
+    <div class="contenedor">
+      
+  <script>
+    console.log("El Script se está ejecutando");
+    document.write("<h2>Ejemplos de Funciones en JavaScript</h2>");
+    document.write("A continuación se muestran ejemplos de los distintos tipos de funciones y eventos en JavaScript.<br><br>");
+
+    // 1️⃣ FUNCIONES
+    document.write("<h3>1. Funciones</h3>");
+    document.write("Ejemplo de una función que muestra un saludo en pantalla y consola.<br><br>");
+    document.write('<button onclick="ejecutarFuncion()">Ejecutar función</button><br><br>');
+
+    // 2️⃣ FUNCIONES QUE RETORNAN VALORES
+    document.write("<h3>2. Funciones que retornan valores</h3>");
+    document.write("Suma dos números ingresados y retorna el resultado.<br><br>");
+    document.write('<input type="number" id="num1" placeholder="Número 1"> ');
+    document.write('<input type="number" id="num2" placeholder="Número 2"> ');
+    document.write('<button onclick="ejecutarSuma()">Calcular Suma</button><br><br>');
+
+    // 3️⃣ LLAMADA A UNA FUNCIÓN
+    document.write("<h3>3. Llamada a una función</h3>");
+    document.write("Ejecuta una función definida anteriormente sin mostrar resultados visibles.<br><br>");
+    document.write('<button onclick="llamarFuncion()">Llamar función</button><br><br>');
+
+    // 4️⃣ IMPRIMIR EN CONSOLA EL RESULTADO DE UNA FUNCIÓN
+    document.write("<h3>4. Imprimir en consola el resultado de una función</h3>");
+    document.write("Ejecuta una función que retorna un valor y lo muestra directamente en consola.<br><br>");
+    document.write('<button onclick="imprimirEnConsola()">Mostrar resultado en consola</button><br><br>');
+
+    // 5️⃣ GETELEMENTBYID
+    document.write("<h3>5. getElementById</h3>");
+    document.write("Obtiene un elemento por su ID y modifica su contenido.<br><br>");
+    document.write('<p id="mensaje">Este texto cambiará con getElementById.</p>');
+    document.write('<button onclick="cambiarTexto()">Ejecutar getElementById</button><br><br>');
+
+    // 6️⃣ ADDEVENTLISTENER
+    document.write("<h3>6. addEventListener</h3>");
+    document.write("Ejecuta una acción cuando ocurre un evento, en este caso, al hacer clic.<br><br>");
+    document.write('<button id="botonEvento">Haz clic aquí</button><br><br>');
+
+    // Contenedor de resultados
+    document.write("<h3>Resultados:</h3>");
+    document.write('<div id="resultados" style="border:1px solid #ccc; padding:10px; width:400px;"></div>');
+
+    // ---------------- FUNCIONES ----------------
+    function agregarResultado(texto) {
+      document.getElementById("resultados").innerHTML += texto + "<br>";
+    }
+
+    // 1️⃣ Funciones
+    function saludo() {
+      console.log("¡Hola mundo!");
+      agregarResultado("1. Funciones: ¡Hola mundo!");
+    }
+    function ejecutarFuncion() {
+      saludo();
+    }
+
+    // 2️⃣ Funciones que retornan valores
+    function sumar(a, b) {
+      return a + b;
+    }
+    function ejecutarSuma() {
+      let n1 = parseFloat(document.getElementById("num1").value);
+      let n2 = parseFloat(document.getElementById("num2").value);
+
+      if (isNaN(n1) || isNaN(n2)) {
+        agregarResultado("Por favor, ingresa dos números válidos.");
+        return;
+      }
+
+      let resultado = sumar(n1, n2);
+      agregarResultado("2. Funciones que retornan valores: " + resultado);
+    }
+
+    // 3️⃣ Llamada a una función
+    function ejemploLlamada() {
+      console.log("La función 'ejemploLlamada' fue llamada correctamente.");
+    }
+    function llamarFuncion() {
+      ejemploLlamada();
+      agregarResultado("3. Llamada a una función: Ring Ring'.");
+    }
+
+    // 4️⃣ Imprimir en consola el resultado de una función
+    function obtenerMensaje() {
+      return "Este es el mensaje retornado por la función.";
+    }
+    function imprimirEnConsola() {
+      let mensaje = obtenerMensaje();
+      console.log("Resultado de la función:", mensaje);
+      agregarResultado("4. Imprimir en consola el resultado de una función: Esta es la impresion de la función.");
+    }
+
+    // 5️⃣ getElementById
+    function cambiarTexto() {
+      let parrafo = document.getElementById("mensaje");
+      parrafo.textContent = "El texto ha sido modificado correctamente con getElementById.";
+      agregarResultado("5. getElementById: Se cambió el color de la bitacora a morado");
+    }
+
+    // 6️⃣ addEventListener
+    window.onload = function() {
+      let boton = document.getElementById("botonEvento");
+      boton.addEventListener("click", function() {
+        agregarResultado("Evento detectado con addEventListener: hiciste clic en el botón.");
+        console.log("Evento 'click' detectado con addEventListener.");
+      });
+    };
+    //Mostrar resultados
+    document.write('<div id="resultados"></div>');
+  </script>
+
+    </div>
+    <div class="vw">
+      Investigacion de los codigos Funciones, Funciones que retornan valores, Llamada a una función, Imprimir en consola el resultado de una funcion, GetElementById y AddEventListener
+    </div><br>
+
+    <div class="vh">
+        <br><img src="img/Cotizacion.jpg" alt="Cotizacion" height="460" width="360" >
+    </div>
+    <div class="vw">
+      Cotizacion
+    </div><br>
+
+<div class="vh">
+<center><div class="flexbox">
+
+        <div class="elem"><img class="Tatua" src="img/Tatu1.jpg"></div>
+        <div class="elem"><img class="Tatua" src="img/Tatu2.jpg"></div>
+        <div class="elem"><img class="Tatua" src="img/Tatu3.jpg"></div>
+    </div></div></center>
+    <div class="vw">
+      Flexbox
+    </div><br>
+
+    <div class="vh">
+        <h2 class="tx1 sombra">Aqui iran los otros temas</h2>
+    </div>
+    <div class="vw">
+      <h2 class="tx1">Aqui alguna descripcion</h2>
+    </div><br>
+</html>
